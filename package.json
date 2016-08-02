@@ -1,0 +1,20 @@
+{
+  "name": "generator-ng-modulize",
+  "version": "0.1.0",
+  "description": "A generator to create standalone modules for AngularJS 1.x in TS/ES6",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "generators/app",
+	"generators/service"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Matthias Komarek",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^0.24.1"
+  }
+}

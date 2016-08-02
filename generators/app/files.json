@@ -1,0 +1,17 @@
+{
+	"static": [
+		"_karma.conf.js"
+	],
+	"typescriptOnly": [
+		"tsconfig.json",
+		"tslint.json",
+		"typings.json"
+	],
+	"templates": [
+		"package.json",
+		"_.gitignore",
+		"webpack/webpack.dev.js",
+		"webpack/webpack.test.js",
+		"webpack/webpack.build.js"
+	]
+}
