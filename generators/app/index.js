@@ -11,15 +11,13 @@ var NgModulizeGenerator = yeoman.Base.extend({
 			type: 'input',
 			name: 'appName',
 			message: 'Your module name',
-			default: this.appname,
-			store: true
+			default: this.appname
 		},
 		{
 			type: 'input',
 			name: 'appDesc',
 			message: 'Your module description',
-			default: '',
-			store: true
+			default: ''
 		},
 		{
 			type: 'list',
@@ -50,8 +48,7 @@ var NgModulizeGenerator = yeoman.Base.extend({
 					},
 					name: 'Typescript'
 				}
-			],
-			store: true
+			]
 		}
 		])
 			.then(function (props) {

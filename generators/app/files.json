@@ -12,6 +12,8 @@
 		"_.gitignore",
 		"webpack/webpack.dev.js",
 		"webpack/webpack.test.js",
-		"webpack/webpack.build.js"
+		"webpack/webpack.build.js",
+    "src/index.html",
+    "src/index.ts"
 	]
 }
