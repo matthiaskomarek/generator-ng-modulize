@@ -1,4 +1,5 @@
 var yeoman = require('yeoman-generator');
+var _ = require('lodash');
 
 var stripLeadingLoDash = function(name) {
 	return name.indexOf('_') === 0 ? name.substring(1) : name;
@@ -48,11 +49,23 @@ var NgModulizeGenerator = yeoman.Base.extend({
 					},
 					name: 'Typescript'
 				}
-			]
-		}
+			],
+			default: 'ts'
+		},
+			{
+				type: 'confirm',
+				name: 'bower',
+				message: 'Do you like to add Bower support?'
+			}
 		])
 			.then(function (props) {
 				this.props = props;
+				console.log(this.props);
+
+				// set names
+				this.props.moduleName = _.upperFirst(_.camelCase(this.props.appName));
+				this.props.bundleName = _.kebabCase(this.props.appName);
+				this.props.bundleFilename = this.props.bundleName + '.min.js';
 			}.bind(this));
 	},
 	writing: function() {
@@ -92,6 +105,10 @@ var NgModulizeGenerator = yeoman.Base.extend({
 				this.props
 			);
 		}, this);
+
+		if (this.props.bower) {
+			this.template('_bower.json', 'bower.json', this.props);
+		}
 	},
 
 	install: function () {

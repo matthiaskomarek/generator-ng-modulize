@@ -1,0 +1,7 @@
+{
+	"name": "<%= moduleName %>",
+	"main": "dist/<%= bundleFilename %>",
+	"dependencies": {
+
+	}
+}

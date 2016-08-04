@@ -7,7 +7,7 @@
   },
   "files": [
     "generators/app",
-	"generators/service"
+    "generators/service"
   ],
   "keywords": [
     "yeoman-generator"
@@ -15,6 +15,7 @@
   "author": "Matthias Komarek",
   "license": "ISC",
   "dependencies": {
+    "lodash": "^4.14.1",
     "yeoman-generator": "^0.24.1"
   }
 }

@@ -1,23 +1,24 @@
 var webpack = require('webpack');
-var fs = require('fs');
 
 module.exports = {
 	entry: ['./src/index.ts'],
 	output: {
-		filename: '<%= appName %>.js',
+		filename: '<%= bundleFilename %>',
 		path: 'dist'
 	},
 	// exclude all none relative paths
 	externals: /^[^.]/,
 	resolve: {
 		root: __dirname,
-		extensions: ['', '.ts', '.js', '.json']
+		extensions: ['', '.ts', '.js', '.json'],
+		modulesDirectories: ['node_modules']
 	},
 	resolveLoader: {
 		modulesDirectories: ['node_modules']
 	},
 	devtool: 'source-map',
 	plugins: [
+		new webpack.NoErrorsPlugin(),
 		new webpack.optimize.UglifyJsPlugin(
 			{
 				warning: false,
@@ -27,6 +28,6 @@ module.exports = {
 		)
 	],
 	module: {
-		loaders: [{test: /\.ts(x?)$/, loaders: ['ts-loader', 'ng-annotate']}]
+		loaders: [{test: /\.ts(x?)$/, loaders: ['ng-annotate', 'ts-loader']}]
 	}
 };

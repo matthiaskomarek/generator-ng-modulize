@@ -1,7 +1,7 @@
 {
-	"name": "<%= appName %>",
+	"name": "<%= moduleName %>",
 	"version": "1.0.0",
-	"description": "Blueprint for AngularJS 1.x modules ",
+	"description": "<%= appDesc %>",
 	"main": "index.js",
 	"scripts": {
 		"test": "karma start",
