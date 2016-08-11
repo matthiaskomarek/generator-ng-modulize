@@ -1,6 +1,6 @@
 # generator-ng-modulize
 
-![Dependencies](https://david-dm.org/matthiaskomarek/generator-ng-modulize.svg)
+![Dependencies](https://david-dm.org/matthiaskomarek/generator-ng-modulize.svg) [![GitHub tag](https://img.shields.io/github/tag/matthiaskomarek/generator-ng-modulize.svg?maxAge=2592000)]()
 
 > Yeoman generator for quick creation of AngularJS modules with Webpack as module bundler and build system
 
